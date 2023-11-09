@@ -7,8 +7,8 @@ DifferentialSteering DiffSteer;
 // Define Input Connection
 #define CH1 3
 #define CH2 11
-#define CH6 8
-#define CH5 12
+#define CH5 8
+#define CH6 12
 #define comp_out 0
 #define solenoid_out 1
 // Integer to represent the value from the stick
