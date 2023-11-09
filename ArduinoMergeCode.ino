@@ -11,7 +11,7 @@ DifferentialSteering DiffSteer;
 #define CH6 12
 #define comp_out 0
 #define solenoid_out 1
-#define reelay 2
+#define relay 2
 // Integer to represent the value from the stick
 int ch1Value;
 int ch2Value;
@@ -67,12 +67,12 @@ void shutOffCheck(bool input_voltage)
 {
   if(checkBatt(input_voltage)) //Legger til mer sikkerhetsfaktor når man kjører
       {
-        digitalWrite(reelayPin, LOW);
+        digitalWrite(relay, LOW);
         digitalWrite(LED_BUILTIN, HIGH);
       }
       else
       {
-       digitalWrite(reelayPin, HIGH);
+       digitalWrite(relay, HIGH);
        digitalWrite(LED_BUILTIN, LOW);
      }
 }
@@ -191,12 +191,14 @@ void loop()
   {
     if (rightMotor > 4|| leftMotor > 4)
     {
-        BMS(compressor_state, true)
+        BMS(compressor_state, true);
     }
     else
     {
-        BMS(compressor_state, false)
+        BMS(compressor_state, false);
     }
+    time = 0;
   }
+
   delay(1);
 }
