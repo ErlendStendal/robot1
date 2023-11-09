@@ -98,7 +98,7 @@ void setup()
 {
 
     pinMode(LED_BUILTIN, OUTPUT);
-    Serial.begin(115200); //comment this out
+    //Serial.begin(115200); //comment this out
     DiffSteer.begin(fPivYLimit);
     pinMode(LED_BUILTIN, OUTPUT);
     pinMode(enA, OUTPUT);
