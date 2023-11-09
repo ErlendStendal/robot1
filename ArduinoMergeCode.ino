@@ -197,6 +197,8 @@ void loop()
     {
         BMS(compressor_state, false);
     }
+    time = 0;
   }
+
   delay(1);
 }
